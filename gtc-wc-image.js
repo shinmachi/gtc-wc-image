@@ -33,22 +33,22 @@ class GtcWcImage extends PolymerElement {
   _formatNotation(value) { 
     var choice = "cfg";
     switch (value) {
-      case 1:
+      case 0:
         choice = "cfg";
         break;
-      case 2:
+      case 1:
         choice = "cfgbw";
         break;
-      case 3:
+      case 2:
         choice = "cfg-uoxf";
         break;
-      case 4:
+      case 3:
         choice = "uoxf";
         break;
-      case 5:
+      case 4:
         choice = "uoxf-color";
         break;
-      case 6:
+      case 5:
         choice = "iupac";
         break;
     }
@@ -57,13 +57,13 @@ class GtcWcImage extends PolymerElement {
   _formatFormat(value) { 
     var choice = "png";
     switch (value) {
-      case 1:
+      case 0:
         choice = "png";
         break;
-      case 2:
+      case 1:
         choice = "jpg";
         break;
-      case 3:
+      case 2:
         choice = "svg";
         break;
     }
@@ -72,13 +72,13 @@ class GtcWcImage extends PolymerElement {
   _formatStyle(value) { 
     var choice = "compact";
     switch (value) {
-      case 1:
+      case 0:
         choice = "compact";
         break;
-      case 2:
+      case 1:
         choice = "normal";
         break;
-      case 3:
+      case 2:
         choice = "normalinfo";
         break;
     }
