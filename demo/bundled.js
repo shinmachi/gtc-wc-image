@@ -151,16 +151,4 @@ class zt{constructor(t){this.value=t.toString()}toString(){return this.value}}fu
   <div>
     <img src="https://glytoucan.org/glycans/{{accession}}/image?style={{style}}&format={{format}}&notation={{notation}}" />
   </div>
-   `}constructor(){super(),this.accession="G00029MO",this.style="extended",this.format="png",this.notation="cfg"}static get properties(){return{accession:String,style:String,format:String,notation:String}}});customElements.define("demo-element",class extends Wt{static get template(){return Vt`
-      <style>
-  :host {
-font-family: sans-serif;
---icon-toggle-color: lightgrey;
---icon-toggle-outline-color: black;
---icon-toggle-pressed-color: red;
-}
-      </style>
-      
-      <h3>Web Component in a Component Demo</h3>
-      <gtc-wc-image accession="G00055MO"></gtc-wc-image>
-    `}})}]);
+   `}constructor(){super(),this.accession="G00029MO",this.style="extended",this.format="png",this.notation="cfg"}static get properties(){return{accession:String,style:String,format:String,notation:String}}})}]);
