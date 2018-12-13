@@ -11,7 +11,7 @@ class GtcWcImage extends PolymerElement {
       }
 </style>
   <div>
-    <img src="https://glytoucan.org/glycans/{{accession}}/image?style={{style}}&format={{format}}&notation={{_formatNotation(notation)}}" />
+    <img src="https://glytoucan.org/glycans/{{accession}}/image?style={{_formatStyle(style)}}&format={{_formatFormat(format)}}&notation={{_formatNotation(notation)}}" />
   </div>
    `;
   }
@@ -33,27 +33,58 @@ class GtcWcImage extends PolymerElement {
   _formatNotation(value) { 
     var choice = "cfg";
     switch (value) {
-      case 0:
+      case 1:
         choice = "cfg";
         break;
-      case 1:
+      case 2:
         choice = "cfgbw";
         break;
-      case 2:
+      case 3:
         choice = "cfg-uoxf";
         break;
-      case 3:
+      case 4:
         choice = "uoxf";
         break;
-      case 4:
+      case 5:
         choice = "uoxf-color";
         break;
-      case 5:
+      case 6:
         choice = "iupac";
         break;
     }
     return choice;
   }
+  _formatFormat(value) { 
+    var choice = "png";
+    switch (value) {
+      case 1:
+        choice = "png";
+        break;
+      case 2:
+        choice = "jpg";
+        break;
+      case 3:
+        choice = "svg";
+        break;
+    }
+    return choice;
+  }
+  _formatStyle(value) { 
+    var choice = "compact";
+    switch (value) {
+      case 1:
+        choice = "compact";
+        break;
+      case 2:
+        choice = "normal";
+        break;
+      case 3:
+        choice = "normalinfo";
+        break;
+    }
+    return choice;
+  }
+
 }
 
 customElements.define('gtc-wc-image', GtcWcImage);
