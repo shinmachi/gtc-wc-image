@@ -11,7 +11,7 @@ class GtcWcImage extends PolymerElement {
       }
 </style>
   <div>
-    <img src="https://glytoucan.org/glycans/{{accession}}/image?style={{style}}&format={{format}}&notation=_formatNotation({{notation}})" />
+    <img src="https://glytoucan.org/glycans/{{accession}}/image?style={{style}}&format={{format}}&notation={{notation}}" />
   </div>
    `;
   }
