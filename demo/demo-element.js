@@ -1,5 +1,5 @@
 import { PolymerElement, html } from '@polymer/polymer/polymer-element.js';
-import '../gtc-wc-image.js';
+import './gtc-wc-image.js';
 
 class DemoElement extends PolymerElement {
   static get template() {
