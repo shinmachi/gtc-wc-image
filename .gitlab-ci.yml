@@ -3,11 +3,9 @@ image: alpine:latest
 pages:
   stage: deploy
   script:
-  - echo 'copy to public_html'
-  - mkdir public_html
-  - cp demo/* public_html
+  - echo 'blah'
   artifacts:
     paths:
-    - public_html
+    - public
   only:
   - master
