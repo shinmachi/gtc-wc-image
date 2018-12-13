@@ -11,7 +11,7 @@ class GtcWcImage extends PolymerElement {
       }
 </style>
   <div>
-    <img src="https://glytoucan.org/glycans/{{accession}}/image?style={{style}}&format={{format}}&notation={{notation}}" />
+    <img src="https://glytoucan.org/glycans/{{accession}}/image?style={{style}}&format={{format}}&notation={{_formatNotation(notation)}}" />
   </div>
    `;
   }
@@ -27,7 +27,7 @@ class GtcWcImage extends PolymerElement {
     	accession: String,
     	style: String,
     	format: String,
-        notation: String
+      notation: String
     };
   }
   _formatNotation(value) { 
