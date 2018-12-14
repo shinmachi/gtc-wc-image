@@ -1,4 +1,5 @@
 import {PolymerElement, html} from '@polymer/polymer';
+import '@polymer/iron-image/iron-image.js';
 
 class GtcWcImage extends PolymerElement {
   static get template() {
@@ -10,10 +11,13 @@ class GtcWcImage extends PolymerElement {
         background-color: lightgray;
       }
 </style>
+
   <div>
-    <a href="https://glytoucan.org"><img src="http://beta.glytoucan.org/img/logo_toucan.png" /></a>
-    <a href="https://glytoucan.org/Structures/Glycans/{{accession}}/">{{accession}}</a>
-    <img src="https://glytoucan.org/glycans/{{accession}}/image?style={{style}}&format={{format}}&notation={{notation}}" />
+    <a href="https://glytoucan.org">
+    <iron-image sizing="contain" fade src="http://beta.glytoucan.org/img/logo_toucan.png"></iron-image>
+    <a href="https://glytoucan.org/Structures/Glycans/{{accession}}/">{{accession}}
+      <img src="https://beta.glytoucan.org/glycans/{{accession}}/image?style={{style}}&format={{format}}&notation={{notation}}" />
+    </a>
   </div>
    `;
   }
