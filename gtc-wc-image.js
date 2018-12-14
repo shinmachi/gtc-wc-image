@@ -13,7 +13,7 @@ class GtcWcImage extends PolymerElement {
   <div>
     <a href="https://glytoucan.org"><img src="http://beta.glytoucan.org/img/logo_toucan.png" /></a>
     <a href="https://glytoucan.org/Structures/Glycans/{{accession}}/">{{accession}}</a>
-    <img src="https://glytoucan.org/glycans/{{accession}}/image?style={{_formatStyle(style)}}&format={{_formatFormat(format)}}&notation={{_formatNotation(notation)}}" />
+    <img src="https://glytoucan.org/glycans/{{accession}}/image?style={{style}}&format={{format}}&notation={{notation}}" />
   </div>
    `;
   }
