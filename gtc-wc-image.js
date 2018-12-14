@@ -6,17 +6,17 @@ class GtcWcImage extends PolymerElement {
     return html`
 <style>
       iron-image {
-        width: 400px;
-        height: 400px;
+        width: 50px;
+        height: 50px;
         background-color: lightgray;
       }
 </style>
 
   <div>
     <a href="https://glytoucan.org">
-    <iron-image sizing="contain" fade src="http://beta.glytoucan.org/img/logo_toucan.png"></iron-image>
+    <iron-image fade src="http://beta.glytoucan.org/img/logo_toucan.png"></iron-image>
     <a href="https://glytoucan.org/Structures/Glycans/{{accession}}/">{{accession}}
-      <img src="https://beta.glytoucan.org/glycans/{{accession}}/image?style={{style}}&format={{format}}&notation={{notation}}" />
+      <img src="http://beta.glytoucan.org/glycans/{{accession}}/image?style={{style}}&format={{format}}&notation={{notation}}" />
     </a>
   </div>
    `;

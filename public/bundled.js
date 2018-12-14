@@ -12313,8 +12313,8 @@ class GtcWcImage extends __WEBPACK_IMPORTED_MODULE_0__polymer_polymer__["a" /* P
     return __WEBPACK_IMPORTED_MODULE_0__polymer_polymer__["b" /* html */]`
 <style>
       iron-image {
-        width: 400px;
-        height: 400px;
+        width: 50px;
+        height: 50px;
         background-color: lightgray;
       }
 </style>
@@ -12323,7 +12323,7 @@ class GtcWcImage extends __WEBPACK_IMPORTED_MODULE_0__polymer_polymer__["a" /* P
     <a href="https://glytoucan.org">
     <iron-image sizing="contain" fade src="http://beta.glytoucan.org/img/logo_toucan.png"></iron-image>
     <a href="https://glytoucan.org/Structures/Glycans/{{accession}}/">{{accession}}
-      <img src="https://beta.glytoucan.org/glycans/{{accession}}/image?style={{style}}&format={{format}}&notation={{notation}}" />
+      <img src="http://beta.glytoucan.org/glycans/{{accession}}/image?style={{style}}&format={{format}}&notation={{notation}}" />
     </a>
   </div>
    `;
