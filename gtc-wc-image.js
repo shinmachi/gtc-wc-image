@@ -11,6 +11,7 @@ class GtcWcImage extends PolymerElement {
       }
 </style>
   <div>
+    <a href="https://glytoucan.org"><img src="http://beta.glytoucan.org/img/logo_toucan.png" /></a>
     <a href="https://glytoucan.org/Structures/Glycans/{{accession}}/">{{accession}}</a>
     <img src="https://glytoucan.org/glycans/{{accession}}/image?style={{_formatStyle(style)}}&format={{_formatFormat(format)}}&notation={{_formatNotation(notation)}}" />
   </div>
@@ -32,6 +33,7 @@ class GtcWcImage extends PolymerElement {
     };
   }
   _formatNotation(value) { 
+    console.log("value=" + value);
     var choice = "cfg";
     switch (value) {
       case 0:
