@@ -3,3 +3,4 @@ yarn.lock
 .firebaserc
 build
 dist
+.project

@@ -12320,11 +12320,14 @@ class GtcWcImage extends __WEBPACK_IMPORTED_MODULE_0__polymer_polymer__["a" /* P
 </style>
 
   <div>
-    <a href="https://glytoucan.org">
-    <iron-image sizing="contain" fade src="http://beta.glytoucan.org/img/logo_toucan.png"></iron-image>
-    <a href="https://glytoucan.org/Structures/Glycans/{{accession}}/">{{accession}}
-      <img src="http://beta.glytoucan.org/glycans/{{accession}}/image?style={{style}}&format={{format}}&notation={{notation}}" />
-    </a>
+    Brought to you by:
+    <a href="https://glytoucan.org"><iron-image sizing="cover" fade src="http://beta.glytoucan.org/img/logo_toucan.png"></iron-image></a>
+  </div>
+  <div>
+    <img src="http://beta.glytoucan.org/glycans/{{accession}}/image?style={{style}}&format={{format}}&notation={{notation}}" />
+    </div>
+    <div>
+    <a href="https://glytoucan.org/Structures/Glycans/{{accession}}/">{{accession}}</a>
   </div>
    `;
   }
