@@ -51,7 +51,7 @@ export class GtcWcImage extends LitElement {
   <a href="https://glytoucan.org"><iron-image sizing="cover" fade src="https://test.gtc.glycosmos.org/img/logo_toucan.png"></iron-image></a>
 </div>
 <div>
-  <img src="https://test.gtc.glycosmos.org/glycans/${this.accession}/image?style=${this.style}&format=${this.format}&notation=${this.notation}" />
+  <img src="https://test.gtc.glycosmos.org/glycans/${this.accession}/image?style=${this.imagestyle}&format=${this.format}&notation=${this.notation}" />
   </div>
   <div>
   <a href="https://glytoucan.org/Structures/Glycans/${this.accession}/">${this.accession}</a>
