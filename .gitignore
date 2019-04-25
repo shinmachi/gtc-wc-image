@@ -3,5 +3,4 @@ yarn.lock
 .firebaserc
 build
 dist
-public/bundled.js
-package-lock.json
+.project

@@ -3,14 +3,18 @@
   "version": "0.0.1",
   "flat": true,
   "description": "GTC accession number to image",
-  "main": "index.html",
+  "main": "gtc-wc-image.ts",
   "repository": "https://gitlab.com/glycosmos/gtc-wc-image",
   "author": "sparqlite",
   "license": "Creative Commons",
   "dependencies": {
-    "@polymer/polymer": "^3.1.0",
     "@polymer/iron-image": "^3.0.1",
+<<<<<<< HEAD
     "@polymer/iron-ajax": "^3.0.1",
     "@webcomponents/webcomponentsjs": "^1.0.20"
+=======
+    "@webcomponents/webcomponentsjs": "^1.0.20",
+    "lit-element": "^2.1.0"
+>>>>>>> 7f0f6c65986e4e54042ff228130e109a5d836e6e
   }
 }
