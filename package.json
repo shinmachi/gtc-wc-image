@@ -10,6 +10,7 @@
   "dependencies": {
     "@polymer/polymer": "^3.1.0",
     "@polymer/iron-image": "^3.0.1",
+    "@polymer/iron-ajax": "^3.0.1",
     "@webcomponents/webcomponentsjs": "^1.0.20"
   }
 }
