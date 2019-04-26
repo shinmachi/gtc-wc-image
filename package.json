@@ -9,12 +9,7 @@
   "license": "Creative Commons",
   "dependencies": {
     "@polymer/iron-image": "^3.0.1",
-<<<<<<< HEAD
-    "@polymer/iron-ajax": "^3.0.1",
-    "@webcomponents/webcomponentsjs": "^1.0.20"
-=======
     "@webcomponents/webcomponentsjs": "^1.0.20",
     "lit-element": "^2.1.0"
->>>>>>> 7f0f6c65986e4e54042ff228130e109a5d836e6e
   }
 }
