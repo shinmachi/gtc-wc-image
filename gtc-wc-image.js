@@ -12,6 +12,7 @@ Object.defineProperty(exports, "__esModule", { value: true });
  **/
 const lit_element_1 = require("lit-element");
 require("@polymer/iron-image/iron-image.js");
+require("@polymer/iron-ajax/iron-ajax.js");
 /**
  * Use the customElement decorator to define your class as
  * a custom element. Registers <my-element> as an HTML tag.
@@ -28,8 +29,13 @@ let GtcWcImage = class GtcWcImage extends lit_element_1.LitElement {
          */
         this.accession = "G00029MO";
         this.imagestyle = "extended";
+        this.imagestylenew = "normalinfo";
         this.format = "png";
+        // formatnew = "svg";
+        this.formatnew = "png";
         this.notation = "cfg";
+        // notationnew = "snfg";
+        this.notationnew = "cfg";
     }
     /**
      * Implement `render` to define a template for your element.
@@ -49,14 +55,23 @@ let GtcWcImage = class GtcWcImage extends lit_element_1.LitElement {
 
 <div>
   Brought to you by:
-  <a href="https://glytoucan.org"><iron-image sizing="cover" fade src="http://beta.glytoucan.org/img/logo_toucan.png"></iron-image></a>
+  <a href="https://glytoucan.org"><iron-image sizing="cover" fade src="https://test.gtc.glycosmos.org/img/logo_toucan.png"></iron-image></a>
 </div>
 <div>
-  <img src="http://beta.glytoucan.org/glycans/${this.accession}/image?style=${this.style}&format=${this.format}&notation=${this.notation}" />
-  </div>
-  <div>
+  <img src="https://test.gtc.glycosmos.org/glycans/${this.accession}/image?style=${this.imagestyle}&format=${this.format}&notation=${this.notation}" />
+</div>
+<div>
   <a href="https://glytoucan.org/Structures/Glycans/${this.accession}/">${this.accession}</a>
-</div>`;
+</div>
+<div>
+  <h2>Using sparqlist</h2>
+  <img src="https://test.sparqlist.glycosmos.org/sparqlist/api/gtc_image?accession=${this.accession}&style=${this.imagestylenew}&format=${this.formatnew}&notation=${this.notationnew}" />
+  <iron-ajax auto url="https://test.sparqlist.glycosmos.org/sparqlist/api/gtc_image?accession=${this.accession}&style=${this.imagestylenew}&format=${this.formatnew}&notation=${this.notationnew}" handle-as="json" last-response="{{sampleid}}"></iron-ajax>
+  <template item="{{sampleid}}">
+    <img src="{{item}}" />
+  </template>
+</div>
+`;
     }
     _formatNotation(value) {
         console.log("value=" + value);
@@ -130,4 +145,3 @@ GtcWcImage = __decorate([
     lit_element_1.customElement('gtc-wc-image')
 ], GtcWcImage);
 exports.GtcWcImage = GtcWcImage;
-//customElements.define('gtc-wc-image', GtcWcImage);

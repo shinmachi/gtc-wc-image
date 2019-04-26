@@ -4,12 +4,19 @@
   "flat": true,
   "description": "GTC accession number to image",
   "main": "gtc-wc-image.ts",
+  "scripts": {
+    "tsc": "tsc"
+  },
   "repository": "https://gitlab.com/glycosmos/gtc-wc-image",
   "author": "sparqlite",
   "license": "Creative Commons",
   "dependencies": {
     "@polymer/iron-image": "^3.0.1",
+    "@polymer/iron-ajax": "^3.0.1",
     "@webcomponents/webcomponentsjs": "^1.0.20",
     "lit-element": "^2.1.0"
+  },
+  "devDependencies": {
+    "typescript": "^3.4.5"
   }
 }
