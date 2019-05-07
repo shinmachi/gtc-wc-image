@@ -524,18 +524,9 @@ subject to an additional IP rights grant found at http://polymer.github.io/PATEN
 </div>
 <div>
   <h2>Using sparqlist</h2>
-  <iron-ajax
-      auto
-      url="http://localhost:8088/sparqlist/api/gtc_image?accession=${this.accession}&style=${this.imagestyle}&format=${this.format}&notation=${this.notation}"
-      handle-as="json"
-      last-response="{{glycanimage}}"></iron-ajax>
-  <template is="dom-repeat" items="{{glycanimage}}">
-    <div>{{item}}</div>
-  </template>
   <div>
     <img src="https://test.sparqlist.glycosmos.org/sparqlist/api/gtc_image?accession=${this.accession}&style=${this.imagestyle}&format=${this.format}&notation=${this.notation}" />
   </div>
-
 </div>
 `}static get properties(){return{glycanimage:{notify:!0,type:String}}}_formatNotation(t){console.log("value="+t);var e="cfg";switch(t){case 0:e="cfg";break;case 1:e="cfgbw";break;case 2:e="cfg-uoxf";break;case 3:e="uoxf";break;case 4:e="uoxf-color";break;case 5:e="iupac"}return e}_formatFormat(t){var e="png";switch(t){case 0:e="png";break;case 1:e="jpg";break;case 2:e="svg"}return e}_formatStyle(t){var e="compact";switch(t){case 0:e="compact";break;case 1:e="normal";break;case 2:e="normalinfo"}return e}};r([i.property()],o.prototype,"accession",void 0),r([i.property()],o.prototype,"imagestyle",void 0),r([i.property()],o.prototype,"format",void 0),r([i.property()],o.prototype,"notation",void 0),o=r([i.customElement("gtc-wc-image")],o),e.GtcWcImage=o},function(t,e,n){"use strict";n.r(e);n(16);var r=n(11),i=n(15),o=n(6);
 /**

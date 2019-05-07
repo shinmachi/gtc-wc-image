@@ -60,18 +60,9 @@ export class GtcWcImage extends LitElement {
 </div>
 <div>
   <h2>Using sparqlist</h2>
-  <iron-ajax
-      auto
-      url="http://localhost:8088/sparqlist/api/gtc_image?accession=${this.accession}&style=${this.imagestyle}&format=${this.format}&notation=${this.notation}"
-      handle-as="json"
-      last-response="{{glycanimage}}"></iron-ajax>
-  <template is="dom-repeat" items="{{glycanimage}}">
-    <div>{{item}}</div>
-  </template>
   <div>
     <img src="https://test.sparqlist.glycosmos.org/sparqlist/api/gtc_image?accession=${this.accession}&style=${this.imagestyle}&format=${this.format}&notation=${this.notation}" />
   </div>
-
 </div>
 `;
   }
