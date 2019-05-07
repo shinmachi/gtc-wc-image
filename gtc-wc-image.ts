@@ -24,18 +24,13 @@ export class GtcWcImage extends LitElement {
 
   @property()
   imagestyle = "extended";
-  imagestylenew = "normalinfo";
 
 
   @property()
   format = "png";
-  // formatnew = "svg";
-  formatnew = "png";
 
   @property()
   notation = "cfg";
-  // notationnew = "snfg";
-  notationnew = "cfg";
 
   /**
    * Implement `render` to define a template for your element.
@@ -65,13 +60,28 @@ export class GtcWcImage extends LitElement {
 </div>
 <div>
   <h2>Using sparqlist</h2>
-  <img src="https://test.sparqlist.glycosmos.org/sparqlist/api/gtc_image?accession=${this.accession}&style=${this.imagestylenew}&format=${this.formatnew}&notation=${this.notationnew}" />
-  <iron-ajax auto url="https://test.sparqlist.glycosmos.org/sparqlist/api/gtc_image?accession=${this.accession}&style=${this.imagestylenew}&format=${this.formatnew}&notation=${this.notationnew}" handle-as="json" last-response="{{sampleid}}"></iron-ajax>
-  <template item="{{sampleid}}">
-    <img src="{{item}}" />
+  <iron-ajax
+      auto
+      url="http://localhost:8088/sparqlist/api/gtc_image?accession=${this.accession}&style=${this.imagestyle}&format=${this.format}&notation=${this.notation}"
+      handle-as="json"
+      last-response="{{glycanimage}}"></iron-ajax>
+  <template is="dom-repeat" items="{{glycanimage}}">
+    <div>{{item}}</div>
   </template>
+  <div>
+    <img src="https://test.sparqlist.glycosmos.org/sparqlist/api/gtc_image?accession=${this.accession}&style=${this.imagestyle}&format=${this.format}&notation=${this.notation}" />
+  </div>
+
 </div>
 `;
+  }
+  static get properties() {
+    return {
+      glycanimage: {
+        notify: true,
+        type: String
+      }
+    };
   }
   _formatNotation(value: Number) {
     console.log("value=" + value);
